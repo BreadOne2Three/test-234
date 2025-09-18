@@ -1,6 +1,47 @@
-[gd_scene load_steps=2 format=3 uid="uid://cweu7f6kkp2ad"]
+[gd_scene load_steps=7 format=3 uid="uid://cweu7f6kkp2ad"]
 
 [ext_resource type="Script" path="res://node_2d.gd" id="1_nlwfp"]
+[ext_resource type="PackedScene" uid="uid://bgp13isrygae2" path="res://Assets/character_body_2d.tscn" id="2_twup6"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_a6qw3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e8s53"]
+size = Vector2(615.5, 20)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_3sr3n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4lo1p"]
+size = Vector2(39, 495)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_nlwfp")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_twup6")]
+position = Vector2(553, 395)
+scale = Vector2(4, 4)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="ground" type="StaticBody2D" parent="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/ground"]
+position = Vector2(559, 550)
+scale = Vector2(638.25, 53.5)
+texture = SubResource("PlaceholderTexture2D_a6qw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/ground"]
+position = Vector2(556.25, 533)
+shape = SubResource("RectangleShape2D_e8s53")
+
+[node name="wall" type="StaticBody2D" parent="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/wall"]
+position = Vector2(227, 312.875)
+scale = Vector2(47.5, 465.75)
+texture = SubResource("PlaceholderTexture2D_3sr3n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/wall"]
+position = Vector2(232, 312)
+shape = SubResource("RectangleShape2D_4lo1p")
