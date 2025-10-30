@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="test 234"
-run/main_scene="res://node_2d.tscn"
-config/features=PackedStringArray("4.3", "GL Compatibility")
+run/main_scene="uid://dt7w3im4kktw2"
+config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [input]

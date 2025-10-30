@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://dt7w3im4kktw2"]
+
+[ext_resource type="Script" uid="uid://dw83m5sfhrofw" path="res://mainmenu.gd" id="1_cmhrf"]
+
+[node name="mainmenu" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cmhrf")
+
+[node name="MAIN" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Play" type="Button" parent="MAIN"]
+layout_mode = 2
+text = "Play"
+
+[node name="Options" type="Button" parent="MAIN"]
+layout_mode = 2
+text = "Options"
+
+[node name="Exit" type="Button" parent="MAIN"]
+layout_mode = 2
+text = "Exit"
+
+[connection signal="pressed" from="MAIN/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MAIN/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MAIN/Exit" to="." method="_on_exit_pressed"]

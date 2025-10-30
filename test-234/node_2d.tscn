@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cweu7f6kkp2ad"]
 
-[ext_resource type="Script" path="res://node_2d.gd" id="1_nlwfp"]
+[ext_resource type="Script" uid="uid://d1w3ukwukuyfe" path="res://node_2d.gd" id="1_nlwfp"]
 [ext_resource type="PackedScene" uid="uid://bgp13isrygae2" path="res://Assets/character_body_2d.tscn" id="2_twup6"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_a6qw3"]
