@@ -51,7 +51,7 @@ func _physics_process(delta: float) -> void:
 	
 	if direction and not wallStick:
 		velocity.x = direction * SPEED
-	elif not wallStick and canWallStick:
+	elif canWallStick:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		
 	if velocity.x != 0 and is_on_floor():
@@ -64,7 +64,7 @@ func _physics_process(delta: float) -> void:
 		$Sprite2D.flip_h = true
 		leftRight = false
 		
-	if is_on_wall() and not is_on_floor() and not Input.is_action_just_pressed("ui_accept") and canWallStick:
+	if is_on_wall() and not is_on_floor() and canWallStick:
 		wallStick = true
 		velocity.y = 0
 		$Sprite2D.texture = preload("res://Assets/CharacterClimb.tres")
