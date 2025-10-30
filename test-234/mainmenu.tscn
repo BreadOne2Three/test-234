@@ -39,6 +39,129 @@ text = "Options"
 layout_mode = 2
 text = "Exit"
 
+[node name="OPTIONS" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -68.0
+offset_right = 60.0
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Screen" type="Button" parent="OPTIONS"]
+layout_mode = 2
+text = "Screen"
+
+[node name="Audio" type="Button" parent="OPTIONS"]
+layout_mode = 2
+text = "Audio"
+
+[node name="Controls" type="Button" parent="OPTIONS"]
+layout_mode = 2
+text = "Controls"
+
+[node name="Game Settings" type="Button" parent="OPTIONS"]
+layout_mode = 2
+text = "Game Settings"
+
+[node name="Back" type="Button" parent="OPTIONS"]
+layout_mode = 2
+text = "Back"
+
+[node name="SCREEN" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.5
+offset_top = -20.0
+offset_right = 22.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back" type="Button" parent="SCREEN"]
+layout_mode = 2
+text = "Back"
+
+[node name="AUDIO" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.5
+offset_top = -20.0
+offset_right = 22.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back" type="Button" parent="AUDIO"]
+layout_mode = 2
+text = "Back"
+
+[node name="CONTROLS" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.5
+offset_top = -20.0
+offset_right = 22.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Avail_Inputs" type="VBoxContainer" parent="CONTROLS"]
+layout_mode = 2
+
+[node name="Back" type="Button" parent="CONTROLS"]
+layout_mode = 2
+text = "Back"
+
+[node name="GAME_SETTINGS" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.5
+offset_top = -20.0
+offset_right = 22.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back" type="Button" parent="GAME_SETTINGS"]
+layout_mode = 2
+text = "Back"
+
 [connection signal="pressed" from="MAIN/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MAIN/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MAIN/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="OPTIONS/Screen" to="." method="_on_screen_pressed"]
+[connection signal="pressed" from="OPTIONS/Audio" to="." method="_on_audio_pressed"]
+[connection signal="pressed" from="OPTIONS/Controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="OPTIONS/Game Settings" to="." method="_on_game_settings_pressed"]
+[connection signal="pressed" from="OPTIONS/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="SCREEN/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="AUDIO/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="CONTROLS/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="GAME_SETTINGS/Back" to="." method="_on_back_pressed"]
